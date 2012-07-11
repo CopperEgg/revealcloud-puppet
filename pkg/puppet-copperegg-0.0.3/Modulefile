@@ -1,7 +1,7 @@
 name    'puppet-copperegg'
-version '0.0.2'
+version '0.0.3'
 author 'Scott C. Johnson'
 license 'BSD'
 summary 'Install and configure CopperEgg collector.'
-project_page 'https://github.com/'
+project_page 'https://github.com/sjohnsoncopperegg/puppet-copperegg'
 

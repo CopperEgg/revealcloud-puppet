@@ -1,11 +1,11 @@
 {
   "author": "Scott C. Johnson",
-  "project_page": "https://github.com/",
+  "project_page": "https://github.com/sjohnsoncopperegg/puppet-copperegg",
   "source": "UNKNOWN",
   "checksums": {
     "manifests/delete.pp": "6955694a8785801f3470f9f6af53b902",
-    "manifests/init.pp": "53abb135dcd96aac28ebdec351ace0c7",
-    "Modulefile": "598cafc74c9f00e56295943c8ce6af77",
+    "Modulefile": "e689fd282626213a5277559a0aba57cc",
+    "manifests/init.pp": "8852cfa2026bf7b7f120038678b15baa",
     "manifests/params.pp": "4b90360c1ad519cc08bcc17d11db69d1",
     "README.md": "27b9ad741701ac5238f6a47e1debaaa2"
   },
@@ -18,6 +18,6 @@
   ],
   "description": "UNKNOWN",
   "name": "puppet-copperegg",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "summary": "Install and configure CopperEgg collector."
 }

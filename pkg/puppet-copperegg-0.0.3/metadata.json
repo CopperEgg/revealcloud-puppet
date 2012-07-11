@@ -3,11 +3,11 @@
   "project_page": "https://github.com/sjohnsoncopperegg/puppet-copperegg",
   "source": "UNKNOWN",
   "checksums": {
-    "manifests/delete.pp": "6955694a8785801f3470f9f6af53b902",
-    "Modulefile": "e689fd282626213a5277559a0aba57cc",
+    "README.md": "2f0f4d48c33ed314ef5e43125cc405ba",
     "manifests/init.pp": "8852cfa2026bf7b7f120038678b15baa",
     "manifests/params.pp": "4b90360c1ad519cc08bcc17d11db69d1",
-    "README.md": "27b9ad741701ac5238f6a47e1debaaa2"
+    "Modulefile": "e689fd282626213a5277559a0aba57cc",
+    "manifests/delete.pp": "6955694a8785801f3470f9f6af53b902"
   },
   "license": "BSD",
   "dependencies": [

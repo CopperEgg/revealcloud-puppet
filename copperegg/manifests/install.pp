@@ -10,7 +10,11 @@ class copperegg::install() {
     unless      => "/usr/bin/test -f /usr/local/revealcloud/revealcloud",
     require     => File [ '/tmp/revealcloud' ],
     cwd         => "/tmp/revealcloud",
-    environment => "RC_TAG='${copperegg::params::revealCloudTags}'",
+    environment => [
+                     "RC_UUID=${hostname}",
+                     "RC_TAG=${copperegg::params::revealCloudTags}",
+                   "RC_OOM_PROTECT=${copperegg::params::revealCloudOomProtect}",
+                   ],
     command     => "/usr/bin/curl -s http://${copperegg::params::revealCloudAPIKey}@api.copperegg.com/rc.sh | sh",
     creates     => "/usr/local/revealcloud/revealcloud",
 

@@ -12,11 +12,11 @@
 #
 # [Remember: No empty lines between comments and class definition]
 class copperegg::params {
-  $apikey = ''
+  $revealCloudAPIKey      = ''
   $revealCloudServiceName = 'revealcloud'
-  $tags = ""
-  $label = ""
-  $proxy = ""
-  $oom_protect = "false"
-  $use_fqdn = "false"
+  $revealCloudTags        = "${hostname},${cluster},${role}"
+  $revealCloudLabel       = ""
+  $revealCloudProxy       = ""
+  $revealCloudOomProtect  = "false"
+  $revealCloudUseFQDN     = "false"
 }

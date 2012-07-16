@@ -12,7 +12,7 @@
 #
 # [Remember: No empty lines between comments and class definition]
 class copperegg::params {
-  $apikey = '6u8MAJVfJU1gsIUa'
+  $apikey = ''
   $revealCloudServiceName = 'revealcloud'
   $tags = ""
   $label = ""

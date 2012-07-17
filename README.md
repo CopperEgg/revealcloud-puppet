@@ -1,7 +1,7 @@
 puppet-copperegg - CopperEgg collector 
+==========================================
 
 Copyright 2012, CopperEgg
-==========================================
 
 This puppet module will install CopperEgg's collector on your servers.
 

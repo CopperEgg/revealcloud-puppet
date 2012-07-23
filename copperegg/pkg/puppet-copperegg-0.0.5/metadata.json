@@ -9,15 +9,15 @@
 
   ],
   "checksums": {
-    "Modulefile": "efcbb9a2b4e588ad5c9f7348e1616fe7",
     "manifests/install.pp": "e65d04a1e1a0597035b3ceb0a5fce612",
     "manifests/init.pp": "2e4f956df42de68aae28e661d4ae3298",
+    "README.md": "044fa25502075fe1d723d2002bf0ac7f",
     "manifests/params.pp": "ae08c0e8d01f46c81ad2bc87d73e8ac8",
-    "README.md": "044fa25502075fe1d723d2002bf0ac7f"
+    "Modulefile": "d011c3b07029aa7877e2ea47fcfa4d25"
   },
   "license": "BSD",
   "author": "Scott C. Johnson",
   "project_page": "https://github.com/sjohnsoncopperegg/puppet-copperegg",
-  "name": "sjohnson-copperegg",
+  "name": "puppet-copperegg",
   "version": "0.0.5"
 }

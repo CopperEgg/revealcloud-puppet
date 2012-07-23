@@ -1,4 +1,4 @@
-name    'sjohnson-copperegg'
+name    'puppet-copperegg'
 version '0.0.5'
 author  'Scott C. Johnson'
 license 'BSD'

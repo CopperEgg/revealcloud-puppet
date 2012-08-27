@@ -1,12 +1,14 @@
 copperegg - CopperEgg collector
-==========================================
+=
 
 Copyright 2012, CopperEgg
 
-This puppet module will install CopperEgg's collector on your servers.
+This Puppet module will install CopperEgg's collector on your servers.
+
+It also contains a simple type and provider for managing RevealUptime Probes.
 
 Installation
-------------
+==
 
 1. Sign up for an account at https://copperegg.com/revealcloud-free-signup/.
 2. You can obtain and install this module from Puppet Forge: 'puppet module install CopperEgg-copperegg'.
@@ -14,6 +16,33 @@ Installation
 3. Include the `copperegg` class to nodes that you want to monitor, e.g., in your site.pp file.
 4. Login to CopperEgg and you should see your systems being monitored within 20-30 seconds.
 
+RevealUptime
+==
+
+Creating a probe
+===
+
+To create a RevealUptime probe use the `revealuptime_probe` resource:
+
+    revealuptime_probe { "http://www.example.com":
+      ensure      => present,
+      description => "This is a test probe.",
+      user        => '1234556789',
+      apikey      => 'abcdef123456',
+    }
+
+Removing a probe
+===
+
+    revealuptime_probe { "http://www.example.com":
+      ensure  => absent,
+      user    => '1234556789',
+      apikey  => 'abcdef123456',
+    }
+
 Contributors
-------------
+==
+
 Brett Maton
+James Turnbull
+

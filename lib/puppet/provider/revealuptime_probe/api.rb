@@ -26,7 +26,7 @@ module Reveal
     API_HOST = "api.copperegg.com/v2"
 
     def auth_encode(resource)
-      auth = Base64.encode64("#{resource[:apikey]}:#{resource[:user]}").strip
+      auth = Base64.encode64("#{resource[:apikey]}:U").strip
       auth.gsub("\n","")
     end
 
@@ -83,7 +83,7 @@ module Reveal
 
         if response
           body = PSON.parse(response.body)
-          p = body.detect {|p| p["probe_dest"] == resource[:name] }
+          p = body.detect {|p| p["probe_dest"] == resource[:name]&& p["probe_desc"] == resource[:description]}
           return p
         else
           raise Puppet::Error, "Could not get probe (nil response)!"

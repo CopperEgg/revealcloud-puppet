@@ -8,16 +8,6 @@ Puppet::Type.newtype(:revealuptime_probe) do
     desc "The RevealUptime meter destination."
   end
 
-  newparam(:user) do
-    desc "Your RevealUptime User."
-
-    validate do |value|
-      if value == nil
-        raise ArgumentError, "You must specify a user."
-      end
-    end
-  end
-
   newparam(:apikey) do
     desc "The RevealUptime API key."
 

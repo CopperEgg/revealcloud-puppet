@@ -27,7 +27,6 @@ To create a RevealUptime probe use the `revealuptime_probe` resource:
     revealuptime_probe { "http://www.example.com":
       ensure      => present,
       description => "This is a test probe.",
-      user        => '1234556789',
       apikey      => 'abcdef123456',
     }
 
@@ -36,7 +35,7 @@ Removing a probe
 
     revealuptime_probe { "http://www.example.com":
       ensure  => absent,
-      user    => '1234556789',
+      description => "This is a test probe.",
       apikey  => 'abcdef123456',
     }
 

@@ -1,5 +1,5 @@
 name    'CopperEgg-copperegg'
-version '1.0.1'
+version '1.0.2'
 author  'Scott C. Johnson'
 license 'BSD'
 summary 'Install and configure CopperEgg collector; manage RevealUptime probes.'

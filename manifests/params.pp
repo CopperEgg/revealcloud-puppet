@@ -58,8 +58,8 @@ class copperegg::params {
   $revealCloudAPIKey      = ''
   $revealCloudServiceName = 'revealcloud'
   $revealCloudTags        = "${hostname},${cluster},${role}"
-  $revealCloudLabel       = ""
-  $revealCloudProxy       = ""
+  $revealCloudLabel       = ''
+  $revealCloudProxy       = ''
   $revealCloudOomProtect  = "false"
-  $revealCloudUUID        = ""
+  $revealCloudUUID        = ''
 }

@@ -1,20 +1,29 @@
 copperegg - CopperEgg collector
 =
 
-Copyright 2012, CopperEgg
+Copyright 2012,2013 CopperEgg Corporation
 
-This Puppet module will install CopperEgg's collector on your servers.
+This Puppet module will install the CopperEgg collector on your servers.
 
-It also contains a simple type and provider for managing RevealUptime Probes.
+It also contains a simple type and provider for installing and managing RevealUptime Probes.
 
 Installation
 ==
 
 1. Sign up for an account at https://copperegg.com/revealcloud-free-signup/.
 2. You can obtain and install this module from Puppet Forge: 'puppet module install CopperEgg-copperegg'.
-   Alternatively, clone this Github package, and copy the release tarball to your puppet master ... CopperEgg-copperegg-x.y.z.tar.gz. Then install the release package as follows: 'puppet module install /path-to-tarball/sconradjohnson-copperegg-x.y.z.tar.gz'.
+   Alternatively, clone this Github package, and copy the release tarball to your puppet master.
+   Then install the release package as follows: 'puppet module install /path-to-tarball/CopperEgg-copperegg-1.0.3.tar.gz'.
 3. Include the `copperegg` class to nodes that you want to monitor, e.g., in your site.pp file.
 4. Login to CopperEgg and you should see your systems being monitored within 20-30 seconds.
+
+Recent Changes
+==
+
+1.0.3 Released on February 10,2013
+  - Fixed a parameter-passing regression in 1.0.2. The issue manifested itself when certain of the parameters specified in params.pp were empty strings.
+    Now the Tags, Label, Proxy and UUID will function as expected.
+  - Also in this release, I have begun including the release tarball (e.g., CopperEgg-copperegg-1.0.3.tar.gz).
 
 RevealUptime
 ==

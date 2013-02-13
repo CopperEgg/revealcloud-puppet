@@ -7,7 +7,7 @@ class copperegg() {
 
   service { $copperegg::params::revealCloudServiceName:
     ensure     => running,
-    enable     => true,
+#    enable     => true,
     require => Class[ 'copperegg::install' ],
   }
 }

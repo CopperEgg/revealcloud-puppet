@@ -20,6 +20,10 @@ Installation
 Recent Changes
 ==
 
+1.0.4 Released on February 13,2013
+  - commented-out the enable command in init.pp
+  - this was done to eliminate an interaction with our init script, which enables the service during install.
+
 1.0.3 Released on February 10,2013
   - Fixed a parameter-passing regression in 1.0.2. The issue manifested itself when certain of the parameters specified in params.pp were empty strings.
     Now the Tags, Label, Proxy and UUID will function as expected.

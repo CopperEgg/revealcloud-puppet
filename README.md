@@ -20,6 +20,9 @@ Installation
 Recent Changes
 ==
 
+1.0.6 Released on March 1, 2013  3:02 PM CST
+  - removed two includes that did not belong.
+
 1.0.5 Released on March 1, 2013
   - updated the copperegg class to a parameterized class
     The default parameters are those declared in the params.pp manifest

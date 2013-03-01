@@ -2,7 +2,6 @@
 #
 # Copyright 2012 CopperEgg
 #
-include copperegg::install
 class copperegg::install() inherits copperegg {
   include copperegg
 

@@ -10,8 +10,6 @@
 #
 # class{'copperegg':  tags => 'tag1, tag2'}
 #
-  include copperegg::params
-
 class copperegg(
     $tags = $copperegg::params::revealCloudTags,
     $api_key = $copperegg::params::revealCloudAPIKey,

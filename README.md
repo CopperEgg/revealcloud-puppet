@@ -20,6 +20,17 @@ Installation
 Recent Changes
 ==
 
+1.0.5 Released on March 1, 2013
+  - updated the copperegg class to a parameterized class
+    The default parameters are those declared in the params.pp manifest
+.
+    You may now override these defaults on a per-node basis.
+  -Usage examples
+    You can still declare the copperegg class in your node definition as before:
+        include copperegg
+    To ovverride the defaults in your node definition:
+         class{'copperegg': tags => 'tag1,tag2' }
+
 1.0.4 Released on February 13,2013
   - commented-out the enable command in init.pp
   - this was done to eliminate an interaction with our init script, which enables the service during install.

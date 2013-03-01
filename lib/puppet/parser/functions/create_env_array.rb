@@ -21,7 +21,7 @@ module Puppet::Parser::Functions
     hsh = Hash.new
     hsh = arg[0]
     hsh.each do |key,value|
-      if (value.to_s != nil) && (value.to_s != '')
+      if (value.to_s != nil) && (value.to_s != '') && (value.to_s != 'undef')
         str = key.to_s + value.to_s
         arr.concat([str])
       end
@@ -29,3 +29,4 @@ module Puppet::Parser::Functions
     arr
   end
 end
+

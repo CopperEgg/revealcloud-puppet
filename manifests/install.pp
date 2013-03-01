@@ -2,24 +2,26 @@
 #
 # Copyright 2012 CopperEgg
 #
-class copperegg::install() {
-  include copperegg::params
+include copperegg::install
+class copperegg::install() inherits copperegg {
+  include copperegg
 
+  include copperegg::params
   file { '/tmp/revealcloud' :
     ensure  => directory,
     mode    => "0755",
   }
 
   exec { 'Install RevealCloud Collector':
-    unless      => "/usr/bin/test -f /usr/local/revealcloud/revealcloud",
+    unless  => "/usr/bin/test -f /usr/local/revealcloud/revealcloud",
     require     => File [ '/tmp/revealcloud' ],
     cwd         => "/tmp/revealcloud",
-    environment => create_env_array( { "RC_UUID=" => $copperegg::params::revealCloudUUID,
-                                      "RC_TAG="  => $copperegg::params::revealCloudTags,
-                                      "RC_OOM_PROTECT=" => $copperegg::params::revealCloudOomProtect,
-                                      "RC_LABEL=" => $copperegg::params::revealCloudLabel,
-                                      "RC_PROXY=" => $copperegg::params::revealCloudProxy } ),
-    command     => "/usr/bin/curl -s http://${copperegg::params::revealCloudAPIKey}@api.copperegg.com/rc.sh | sh",
+    environment => create_env_array( {"RC_UUID="        => $copperegg::uuid,
+                                      "RC_TAG="         => $copperegg::tags,
+                                      "RC_OOM_PROTECT=" => $copperegg::OOM_protect,
+                                      "RC_LABEL="       =>  $copperegg::label,
+                                      "RC_PROXY="       => $copperegg::proxy } ),
+    command     => "/usr/bin/curl http://${copperegg::api_key}@api.copperegg.com/rc.sh | sh",
     creates     => "/usr/local/revealcloud/revealcloud",
   }
 }

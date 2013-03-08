@@ -20,6 +20,9 @@ Installation
 Recent Changes
 ==
 
+1.0.7 Released on March 8, 2013
+  - improved error reporting during installation
+
 1.0.6 Released on March 1, 2013  3:02 PM CST
   - removed two includes that did not belong.
 

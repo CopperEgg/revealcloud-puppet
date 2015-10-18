@@ -1,6 +1,6 @@
 Puppet::Type.newtype(:revealuptime_probe) do
 
-  @doc = "Manage creation/deletion of Copperegg RevealUptime probes`."
+  @doc = "Manage creation/deletion of Uptime Cloud Monitor RevealUptime probes`."
 
   ensurable
 

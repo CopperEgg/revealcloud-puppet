@@ -1,6 +1,6 @@
 # Class: copperegg::install
 #
-# Copyright 2012 CopperEgg
+# Copyright 2012 IDERA
 #
 class copperegg::install() inherits copperegg {
 

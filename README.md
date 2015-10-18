@@ -1,9 +1,9 @@
 copperegg - CopperEgg collector
 =
 
-Copyright 2012,2013 CopperEgg Corporation
+Copyright 2012,2013 IDERA
 
-This Puppet module will install the CopperEgg collector on your servers.
+This Puppet module will install the Uptime Cloud Monitor collector on your servers.
 
 It also contains a simple type and provider for installing and managing RevealUptime Probes.
 
@@ -15,7 +15,7 @@ Installation
    Alternatively, clone this Github package, and copy the release tarball to your puppet master.
    Then install the release package as follows: 'puppet module install /path-to-tarball/CopperEgg-copperegg-1.0.3.tar.gz'.
 3. Include the `copperegg` class to nodes that you want to monitor, e.g., in your site.pp file.
-4. Login to CopperEgg and you should see your systems being monitored within 20-30 seconds.
+4. Login to Uptime Cloud Monitor and you should see your systems being monitored within 20-30 seconds.
 
 Recent Changes
 ==

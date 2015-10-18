@@ -1,6 +1,6 @@
 # Class: copperegg
 #
-# Copyright 2012,2013 CopperEgg
+# Copyright 2012,2013 IDERA
 #
 # Sample Usage:
 #

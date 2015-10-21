@@ -11,7 +11,7 @@
 #
 # output: array of env strings, with null strings removed
 #
-# Copyright 2013 CopperEgg Corporation
+# Copyright 2013 IDERA
 #
 #encoding: utf-8
 

@@ -1,9 +1,9 @@
 # Class: copperegg::params
 #
-# Copyright 2012, CopperEgg
+# Copyright 2012, IDERA
 #
 #  revealCloudAPIKey
-#   Your User API Key.  Can be found in the CopperEgg UI :
+#   Your User API Key.  Can be found in the Uptime Cloud Monitor UI :
 #   Click on the Settings Tab => Click on Personal Settings => bottom panel
 #     REQUIRED.  Revealcloud will not work without this attribute.
 #

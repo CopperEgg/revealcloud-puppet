@@ -19,7 +19,7 @@ class copperegg(
     $proxy =   $copperegg::params::revealCloudProxy
   ) inherits copperegg::params {
 
-  include copperegg::params
+#  include copperegg::params
   include copperegg::install
 
   service { $copperegg::params::revealCloudServiceName:
@@ -28,4 +28,9 @@ class copperegg(
     hasstatus => false,
     require => Class[ 'copperegg::install' ],
   }
+}
+
+
+node 'localdev.example.com' {
+  class{'copperegg':}
 }

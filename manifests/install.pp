@@ -15,7 +15,7 @@ class copperegg::install() inherits copperegg {
     require    => File [ '/tmp/revealcloud' ],
     cwd        => "/tmp/revealcloud",
     notify     => Exec ['Install RevealCloud Collector'],
-    command    => "/usr/bin/curl http://${copperegg::api_key}@api.copperegg.com/rc.sh > /tmp/revealcloud/rc.sh",
+    command    => "/usr/bin/curl http://${copperegg::api_key}@api.staging.cuegg.net/rc.sh > /tmp/revealcloud/rc.sh",
     creates    => "/tmp/revealcloud/rc.sh",
   }
 

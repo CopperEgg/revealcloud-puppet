@@ -1,0 +1,1 @@
+{"virtualbox":{"/etc/puppet":{"guestpath":"/etc/puppet","hostpath":"/detached/JTG/Sourcecode/cuegg/repos/revealcloud-puppet","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/detached/JTG/Sourcecode/cuegg/repos/revealcloud-puppet/test","disabled":false,"__vagrantfile":true}}}

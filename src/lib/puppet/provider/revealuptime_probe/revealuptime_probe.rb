@@ -15,6 +15,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+require_relative 'api'
 
 Puppet::Type.type(:revealuptime_probe).provide(:revealuptime_probe) do
 

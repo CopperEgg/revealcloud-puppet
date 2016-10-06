@@ -13,7 +13,7 @@
 #
 # Copyright 2013 IDERA
 #
-#encoding: utf-8
+# encoding: utf-8
 
 module Puppet::Parser::Functions
   newfunction(:create_env_array, :type => :rvalue) do |arg|

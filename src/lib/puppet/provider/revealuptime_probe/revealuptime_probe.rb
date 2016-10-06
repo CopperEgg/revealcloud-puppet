@@ -16,13 +16,11 @@
 # limitations under the License.
 #
 
-#require "api"
-
 Puppet::Type.type(:revealuptime_probe).provide(:revealuptime_probe) do
 
   include Reveal::API
 
-  desc "Manage RevealUptime Probes."
+  desc 'Manage probes for your Uptime Cloud Monitor account'
 
   defaultfor :kernel => 'Linux'
 
@@ -35,9 +33,9 @@ Puppet::Type.type(:revealuptime_probe).provide(:revealuptime_probe) do
   end
 
   def exists?
-    probe = get_probe("id", resource)
+    probe = get_probe('id', resource)
     if probe
-      @probe_id = probe["id"]
+      @probe_id = probe['id']
       true
     else
       false

@@ -1,5 +1,5 @@
 #
-# Author:: Jomes Turnbull <james@puppetlabs.com>
+# Author:: James Turnbull <james@puppetlabs.com>
 #
 # Copyright 2012, Puppet Labs
 #
@@ -16,33 +16,33 @@
 # limitations under the License.
 #
 
-require "uri"
-require "net/https"
-require "base64"
+require 'uri'
+require 'net/https'
+require 'base64'
 
 module Reveal
   module API
 
-    API_HOST = "api.copperegg.com/v2"
+    API_HOST = 'api.copperegg.com/v2'
 
     def auth_encode(resource)
       auth = Base64.encode64("#{resource[:apikey]}:U").strip
-      auth.gsub("\n","")
+      auth.gsub("\n",'')
     end
 
     def generate_headers(resource)
       auth = auth_encode(resource)
-      { "Authorization" => "Basic #{auth}", "Content-Type" => "application/json" }
+      { 'Authorization' => "Basic #{auth}", 'Content-Type' => 'application/json' }
     end
 
     def build_url(resource, action)
       case action
-      when :create
-        "https://#{API_HOST}/revealuptime/probes.json"
-      when :index
-        "https://#{API_HOST}/revealuptime/probes.json"
-      when :delete
-        "https://#{API_HOST}/revealuptime/probes/#{@probe_id}.json"
+        when :create
+          "https://#{API_HOST}/revealuptime/probes.json"
+        when :index
+          "https://#{API_HOST}/revealuptime/probes.json"
+        when :delete
+          "https://#{API_HOST}/revealuptime/probes/#{@probe_id}.json"
       end
     end
 
@@ -50,7 +50,8 @@ module Reveal
       begin
         url = build_url(resource, :create)
         headers = generate_headers(resource)
-        body = {"probe_desc" => resource[:description], "probe_dest" => resource[:name], "type" => resource[:type], "frequency" => resource[:frequency]}.to_pson
+        body = {'probe_desc' => resource[:description], 'probe_dest' => resource[:name],
+                'type' => resource[:type], 'frequency' => resource[:frequency]}.to_pson
 
         Puppet.info("Creating probe #{resource[:name]}")
         response = http_request(:post, url, headers, body)
@@ -58,7 +59,7 @@ module Reveal
         body = PSON.parse(response.body)
         @probe_id = body["id"]
       rescue Exception => e
-          raise Puppet::Error, "Could not create probe #{resource[:name]}, failed with #{e}"
+        raise Puppet::Error, "Could not create probe #{resource[:name]}, failed with #{e}"
       end
     end
 
@@ -83,10 +84,10 @@ module Reveal
 
         if response
           body = PSON.parse(response.body)
-          p = body.detect {|p| p["probe_dest"] == resource[:name]&& p["probe_desc"] == resource[:description]}
+          p = body.detect {|p| p['probe_dest'] == resource[:name] && p['probe_desc'] == resource[:description]}
           return p
         else
-          raise Puppet::Error, "Could not get probe (nil response)!"
+          raise Puppet::Error, 'Could not get probe (nil response)!'
         end
 
       rescue Exception => e
@@ -106,19 +107,19 @@ module Reveal
       http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
       case method
-      when :get
-        req = Net::HTTP::Get.new(uri.request_uri)
-      when :post
-        req = Net::HTTP::Post.new(uri.request_uri)
-        req.body = body
-      when :put
-        req = Net::HTTP::Put.new(uri.request_uri)
-        req.body = body
-      when :delete
-        req = Net::HTTP::Delete.new(uri.request_uri)
-      else
-        raise Puppet::Error, "Unsupported http method (nil response)!"
-        nil
+        when :get
+          req = Net::HTTP::Get.new(uri.request_uri)
+        when :post
+          req = Net::HTTP::Post.new(uri.request_uri)
+          req.body = body
+        when :put
+          req = Net::HTTP::Put.new(uri.request_uri)
+          req.body = body
+        when :delete
+          req = Net::HTTP::Delete.new(uri.request_uri)
+        else
+          raise Puppet::Error, 'Unsupported http method (nil response)!'
+          nil
       end
 
       headers.each{|k,v|
@@ -138,12 +139,12 @@ module Reveal
 
     def bad_response?(method, url, response)
       case response
-      when Net::HTTPSuccess
-        false
-      else
-        true
-        raise Puppet::Error, "Got a #{response.code} for #{method} to #{url}"
-        true
+        when Net::HTTPSuccess
+          false
+        else
+          true
+          raise Puppet::Error, "Got a #{response.code} for #{method} to #{url}"
+          true
       end
     end
   end

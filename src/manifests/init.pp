@@ -6,7 +6,7 @@
 #
 # include copperegg
 #
-# or to override any of the deafaults:
+# or to override any of the defaults:
 #
 # class{'copperegg':  tags => 'tag1, tag2'}
 #

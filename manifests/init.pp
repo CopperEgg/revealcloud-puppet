@@ -15,8 +15,9 @@ class copperegg(
     $api_key = $copperegg::params::revealCloudAPIKey,
     $label = $copperegg::params::revealCloudLabel,
     $uuid = $copperegg::params::revealCloudUUID,
-    $OOM_protect = $copperegg::params::revealCloudOomProtect,
-    $proxy =   $copperegg::params::revealCloudProxy
+    $oom_protect = $copperegg::params::revealCloudOomProtect,
+    $proxy =   $copperegg::params::revealCloudProxy,
+    $host = $copperegg::params::revealCloudHost
   ) inherits copperegg::params {
 
   include copperegg::params

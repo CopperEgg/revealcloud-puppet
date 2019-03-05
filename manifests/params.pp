@@ -62,4 +62,5 @@ class copperegg::params {
   $revealCloudProxy       = ''
   $revealCloudOomProtect  = "false"
   $revealCloudUUID        = ''
+  $revealCloudHost        = 'copperegg.com'
 }

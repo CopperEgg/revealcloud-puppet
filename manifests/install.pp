@@ -28,7 +28,7 @@ class copperegg::install() inherits copperegg {
     environment => create_env_array( {"RC_UUID="        => $copperegg::uuid,
                                       "RC_TAG="         => $copperegg::tags,
                                       "RC_OOM_PROTECT=" => $copperegg::oom_protect,
-                                      "RC_LABEL="       =>  $copperegg::label,
+                                      "RC_LABEL="       => $copperegg::label,
                                       "RC_PROXY="       => $copperegg::proxy } ),
     command    => "/bin/sh /tmp/revealcloud/rc.sh",
     creates    => "/usr/local/revealcloud/revealcloud",

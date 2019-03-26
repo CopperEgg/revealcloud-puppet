@@ -11,12 +11,13 @@
 # class{'copperegg':  tags => 'tag1, tag2'}
 #
 class copperegg(
-    $tags = $copperegg::params::revealCloudTags,
-    $api_key = $copperegg::params::revealCloudAPIKey,
-    $label = $copperegg::params::revealCloudLabel,
-    $uuid = $copperegg::params::revealCloudUUID,
-    $OOM_protect = $copperegg::params::revealCloudOomProtect,
-    $proxy =   $copperegg::params::revealCloudProxy
+    String $tags = $copperegg::params::revealCloudTags,
+    String $api_key = $copperegg::params::revealCloudAPIKey,
+    String $label = $copperegg::params::revealCloudLabel,
+    String $uuid = $copperegg::params::revealCloudUUID,
+    String $oom_protect = $copperegg::params::revealCloudOomProtect,
+    String $proxy =   $copperegg::params::revealCloudProxy,
+    String $host = $copperegg::params::revealCloudHost
   ) inherits copperegg::params {
 
   include copperegg::params
